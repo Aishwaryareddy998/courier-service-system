@@ -1,0 +1,86 @@
+<div class="registration">
+    <h1>Registration form</h1>
+      <form  [formGroup]="registrationForm" (ngSubmit)="onSubmitRegistrationForm()">
+      <div >
+          <label for="fname">First Name:</label>
+          <input type="text" formControlName="fname"/>
+          <div *ngIf="fname.invalid && (fname.dirty || fname.touched)"id="error">
+            <div *ngIf="fname.hasError('minlength')">
+              First name must have minimum 5 characters..
+            </div>
+            <div *ngIf="fname.hasError('required')">
+                  First name can not be left blank..
+            </div>
+          </div>
+      </div>
+      <div>
+          <label for="lname">Last Name:</label>
+          <input type="text" formControlName="lname"/>
+          <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" id="error">
+              <div *ngIf="lname.hasError('required')">
+                  Last name can not be left blank..
+              </div>
+              <div *ngIf="lname.hasError('minlength')">
+                  Last name must have minimum 5 characters..
+              </div>
+          </div>
+      </div>
+      <div>
+          <label for="emailid">Email Id:</label>&nbsp;&nbsp;&nbsp;
+          <input type="text" formControlName="emailid"/>
+          <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" id="error">
+              <div *ngIf="emailid.hasError('required')">
+                  Email id can not be left blank..
+              </div>
+              <div *ngIf="emailid.hasError('minlength')">
+                  Email id must have minimum 5 characters..
+              </div>
+              <div *ngIf="emailid.hasError('maxlength')">
+                  Email id must have maximum 60 characters..
+              </div>
+              <div *ngIf="emailid.hasError('pattern')">
+                  Email id can be alphabetic, numbers or . &#64; only..
+              </div>
+          </div>
+      </div>
+      <div>
+        <label for="mobileno">Mobile no:</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" formControlName="mobileno"/>
+        <div *ngIf="mobileno.invalid && (mobileno.dirty || mobileno.touched)" id="error">
+          <div *ngIf="mobileno.hasError('required')">
+            mobile no can not be left blank..
+          </div>
+          <div *ngIf="mobileno.hasError('minlength')">
+            mobile no must have minimum 10 characters..
+          </div>
+          <div *ngIf="mobileno.hasError('maxlength')">
+            mobile no must have maximum 10 characters..
+          </div>
+          <div *ngIf="mobileno.hasError('pattern')">
+            mobile no can be numbers  only..
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="membertype">Member Type:</label>
+        <select formControlName="membertype">
+          <option value="Admin">Admin</option>
+          <option value="User">User</option>
+        </select>
+        <div *ngIf="membertype.invalid && (membertype.dirty || membertype.touched)" id="error">
+          <div *ngIf="membertype.hasError('required')">
+            Please select membertype..
+          </div>
+        </div>
+      </div>
+    <div>
+        <button type="register" [disabled]="registrationForm.invalid">Register</button>
+    </div>
+  </form>
+      <div *ngIf="!confirmationMessage && registrationForm.invalid" id="error">
+        <h4>Please fill form for registration </h4>
+      </div>
+      <div *ngIf="confirmationMessage" style="color:blue;">
+        <h3>Thank you for registering in our courier service...</h3>
+      </div>
+  

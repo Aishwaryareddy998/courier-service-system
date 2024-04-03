@@ -1,0 +1,107 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  .container{
+    background-image: url('../homepage/image.jpg');
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+  }
+  #card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #image-container {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker Green */
+  }
+  header {
+    background-color: #293a45;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+  
+  }
+
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; /* Added */
+  }
+  nav ul li a {
+    color: #b98686;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s ease;
+  }
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+  }
+  nav ul li:hover .sub-menu {
+    display: block;
+  }
+  .sub-menu a {
+    display: block;
+    color: #8b90c4;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .sub-menu a:hover {
+    color: #ffcc00;
+  }
+  
+  section {
+    padding: 2px;
+    margin: 2px;
+    background-color: #fff;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

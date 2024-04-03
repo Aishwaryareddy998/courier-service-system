@@ -1,0 +1,28 @@
+.registration{
+    background-image: url('../signup/12345.jpg');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh;
+}h2{
+    color:olivedrab;
+}
+#error{
+    color: red;
+}
+div{
+    margin: 40px 40px;
+    text-align: center;
+}
+input:invalid{
+    box-shadow: 0 0 5px 1px red;
+}
+select:invalid{
+    box-shadow: 0 0 5px 1px red;
+}
+textarea:invalid{
+    box-shadow: 0 0 5px 1px red;
+}
+h1{
+    text-align: center;
+    color: rgb(12, 18, 67);
+}

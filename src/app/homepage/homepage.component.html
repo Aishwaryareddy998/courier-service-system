@@ -1,0 +1,37 @@
+<header>
+    <h1>Welcome to your courier service</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li>
+        <a routerLink="/pickup-request">Courier</a>
+        <ul class="sub-menu">
+          <li><a routerLink="/Pickup-request">Pickup Request</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/track">Track</a></li>
+      <li><a routerLink="/about">About Us</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div id="container">
+      <div id="image-container">
+        <div id="card">
+          <button routerLink="/loginpage">Login</button>
+          <br>
+  
+          <button routerLink="/signup">Signup</button>
+        </div>
+      </div>
+    </div>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 My Homepage. All rights reserved.</p>
+  </footer>
+  
